@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY KISAH</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 🔹 Hilangkan margin & scrollbar seluruh halaman */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    /* 🔹 Buat container menutupi penuh layar */
+    .cont {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+      background: #000 !important;
+    }
+
+    /* 🔹 Pastikan elemen dalam container ikut penuh */
+    .cont__inner,
+    .el,
+    .el__overflow,
+    .el__inner {
+      height: 100vh !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* 🔹 Gambar dan overlay menutupi seluruh layar */
+    .el__bg,
+    .el__bg:before,
+    .el__bg:after {
+      width: 100vw !important;
+      height: 100vh !important;
+      top: 0 !important;
+      left: 0 !important;
+      background-size: cover !important;
+      background-position: center center !important;
+    }
+
+    /* 🔹 Panel aktif full screen */
+    .el.s--active {
+      width: 100vw !important;
+      height: 100vh !important;
+      transform: none !important;
+    }
+
+    /* 🔹 Tombol X tanpa background abu-abu */
+    .el__close-btn {
+      position: absolute !important;
+      top: 25px !important;
+      right: 30px !important;
+      width: 50px !important;
+      height: 50px !important;
+      background: none !important; /* 🧹 hapus abu-abu */
+      border: none !important;
+      z-index: 10 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      transition: transform 0.3s ease !important;
+    }
+
+    .el__close-btn:hover {
+      transform: scale(1.1) !important;
+    }
+
+    /* 🔹 Warna garis X putih murni */
+    .el__close-btn:before,
+    .el__close-btn:after {
+      background: #fff !important;
+      height: 5px !important;
+      border-radius: 2px !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="cont s--inactive">
+    <div class="cont__inner">
+
+      <!-- PANEL 1 -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">SECTION 1</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Gawr Gura</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 2 -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">SECTION 2</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">yotsuba nakano</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 3 -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">SECTION 3</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Adashino Benio</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 4 -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">SECTION 4</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Herta</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 5 -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">SECTION 5</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Toga Himiko</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="jir.js"></script>
+</body>
+</html>
